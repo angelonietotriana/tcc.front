@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+<div class="bd-example-snippet bd-code-snippet">
+    <div class="mb-2 m-2 ">Editar el estado de un Despacho</div>
+      <div class="bd-example m-0 border-0">
+        <form [formGroup]="editaDespacho" (ngSubmit)="onProcess(editaDespacho.value)">
+            <div class="mb-3">
+            <div id="origenHelp" class="form-text">Número Documento Remitente</div>
+              <input type="text" class="form-control" id="numeroDocumentoRemitente" formControlName="numeroDocumentoRemitente" aria-describedby="origenHelp">
+            </div>
+            <div class="mb-3">
+            <div id="destinoHelp" class="form-text">Número Envio</div>
+              <input type="text" class="form-control" id="numeroEnvio" formControlName="numeroEnvio" aria-describedby="destinoHelp">
+            </div>
+            <div class="mb-3">
+                <div id="estado" class="form-text">Nuevo estado</div>
+                <select class="form-select" aria-label="idNuevoEstado" formControlName="idNuevoEstado" >
+                  <option selected>Selecciona</option>
+                  <option value="1">Inicio</option>
+                  <option value="2">En Proceso</option>
+                  <option value="3">Entregando</option>
+                  <option value="4">Entregado</option>
+                  </select>
+            </div>
+          <button type="submit" class="btn btn-primary">Procesar</button>
+        </form>
+      </div>
+    </div>
+

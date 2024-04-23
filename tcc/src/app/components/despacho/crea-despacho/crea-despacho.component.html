@@ -1,0 +1,107 @@
+<app-menu></app-menu>
+<div class="bd-example-snippet bd-code-snippet">
+<div class="mb-2 m-2 ">Creación de un Despacho</div>
+  <div class="bd-example m-0 border-0">
+    <form [formGroup]="creaDespacho" (ngSubmit)="onProcess(creaDespacho.value)">
+      <div class="mb-3">
+          <div id="ciudadOrigen" class="form-text">Ciudad origen *</div>
+          <select class="form-select" aria-label="ciudadOrigen" formControlName="ciudadOrigen" >
+              <option selected>Selecciona</option>
+              <option value="1">Cali</option>
+              <option value="2">Medellin</option>
+              <option value="21">Barranquilla</option>
+              <option value="22">Bogota</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <div id="estado" class="form-text">Ciudad destino *</div>
+          <select class="form-select" aria-label="ciudadDestino" formControlName="ciudadDestino" >
+            <option selected>Selecciona</option>
+            <option value="1">Cali</option>
+            <option value="2">Medellin</option>
+            <option value="21">Barranquilla</option>
+            <option value="22">Bogota</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <div id="nombreRemitenteHelp" class="form-text">Nombre remitente *</div>
+          <input type="text" class="form-control" id="nombreRemitente" formControlName="nombreRemitente" aria-describedby="nombreRemitenteHelp">
+        </div>
+        <div class="mb-3">
+            <div id="nombreDestinatarioHelp" class="form-text">Nombre destinatario *</div>
+            <input type="text" class="form-control" id="nombreDestinatario" formControlName="nombreDestinatario" aria-describedby="nombreDestinatarioHelp">
+        </div>
+        <div class="mb-3">
+         <div id="direccionRemitenteHelp" class="form-text">Dirección remitente *</div>
+          <input type="text" class="form-control" id="direccionRemitente" formControlName="direccionRemitente" aria-describedby="direccionRemitenteHelp">
+        </div>
+        <div class="mb-3">
+            <div id="direccionDestinatarioHelp" class="form-text">Dirección destinatario *</div>
+            <input type="text" class="form-control" id="direccionDestinatario" formControlName="direccionDestinatario" aria-describedby="direccionDestinatarioHelp">
+        </div>
+        <div class="mb-3">
+          <div id="documentoRemitenteHelp" class="form-text">Documento remitente *</div>
+            <input type="number" class="form-control" id="documentoRemitente" formControlName="documentoRemitente" aria-describedby="documentoRemitenteHelp">
+          </div>
+          <div class="mb-3">
+             <div id="documentoDestinatarioHelp" class="form-text">Documento destinatario *</div>
+              <input type="number" class="form-control" id="documentoDestinatario" formControlName="documentoDestinatario" aria-describedby="documentoDestinatarioHelp">
+          </div>
+          <div class="mb-3">
+          <div id="celRemitenteHelp" class="form-text">Celular remitente *</div>
+            <input type="text" class="form-control" id="celRemitente" formControlName="celRemitente" aria-describedby="celRemitenteHelp">
+          </div>
+          <div class="mb-3">
+             <div id="celDestinatarioHelp" class="form-text">Celular destinatario *</div>
+              <input type="text" class="form-control" id="celDestinatario" formControlName="celDestinatario" aria-describedby="celDestinatarioHelp">
+          </div>
+          <div class="mb-3">
+              <div id="idMercanciaHelp" class="form-text">Id mercancía *</div>
+              <select class="form-select" aria-label="idMercancia" formControlName="idMercancia" >
+                <option selected>Selecciona</option>
+                <option value="1">Tecnología -	Celular</option>
+                <option value="2">Tecnología -	Tableta</option>
+                <option value="3">Ropa -	En General</option>
+                <option value="5">Ropa -	Calzado</option>
+                <option value="6">Alimentos -	Frutos Secos</option>
+              </select>
+          </div>
+          <div class="mb-3">
+            <div id="pesoHelp" class="form-text">Peso mercancía *</div>
+            <input type="number" class="form-control" id="peso" formControlName="peso" aria-describedby="pesoHelp">
+          </div>
+          <div class="mb-3">
+            <div id="tipoEnvioHelp" class="form-text">Tipo envío *</div>
+            <select class="form-select" aria-label="tipoEnvio" formControlName="tipoEnvio" >
+              <option selected>Selecciona</option>
+              <option value="terrestre">Terrestre</option>
+              <option value="aerea">Aerea</option>
+              <option value="maritima">Maritima</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <div id="tipoEntregaHelp" class="form-text">Tipo entrega *</div>
+            <select class="form-select" aria-label="tipoEntrega" formControlName="tipoEntrega" >
+              <option selected>Selecciona</option>
+              <option value="normal">Normal</option>
+              <option value="express">Express</option>
+              <option value="delicada">Delicada</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <div id="valorCobradoHelp" class="form-text">Valor cobrado *</div>
+            <input type="number" class="form-control" id="valorCobrado" formControlName="valorCobrado" aria-describedby="valorCobradoHelp">
+          </div>
+          <div class="mb-3">
+            <div id="valorACobrarHelp" class="form-text">Valor a cobrar *</div>
+            <input type="number" class="form-control" id="valorACobrar" formControlName="valorACobrar" aria-describedby="valorACobrarHelp">
+          </div>
+          <div class="mb-3">
+            <div id="observacionesHelp" class="form-text">Observaciones *</div>
+            <input type="text" class="form-control" id="observaciones" formControlName="observaciones" aria-describedby="observacionesHelp">
+          </div>
+        <button type="submit" class="btn btn-primary">Crear</button>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,65 @@
+<app-menu></app-menu>
+  <div class="card margin-sm">
+      <form [formGroup]="filtroDespacho" (ngSubmit)="onProcess(filtroDespacho.value)"  >
+          <div class="container text-center card-body sm">
+              <div class="row">
+                  <div class="col col col-md-4 col-lg-4 mx-auto">
+                      <div class="mb-3">
+                          <div id="idReservaHelp" class="form-text sm">Documento remitente</div>
+                          <input type="number" class="form-control btn-sm sm col-4 " id="documentoRemitente" formControlName="documentoRemitente" aria-describedby="idReservaHelp">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col ">
+                    <button type="submit" class="btn-info btn btn-xm margin-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                        Consulta</button>
+                </div>
+            </div>
+          </div>
+      </form>
+    <p  class="container text-center">Lista de despachos</p>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th scope="col">Id despacho</th>
+                <th scope="col">fecha creación</th>
+                <th scope="col">Ciudad origen</th>
+                <th scope="col">Ciudad destino</th>
+                <th scope="col">Remitente</th>
+                <th scope="col">Destinatario</th>
+                <th scope="col">Dir remitente</th>
+                <th scope="col">Dir destinatario</th>
+                <th scope="col">Doc remitente</th>
+                <th scope="col">Doc destinatario</th>
+                <th scope="col">Cel remitente</th>
+                <th scope="col">Cel destinatario</th>
+                <th scope="col">Envío</th>
+                <th scope="col">Estado</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @for (despacho of despachos; track despacho.id_despacho; let i = $index) {
+                <tr>
+                    <th scope="row">{{ despacho.id_despacho }}</th>
+                    <td>{{ despacho.fecha_creacion }}</td>
+                    <td>{{ despacho.ciudad_origen }}</td>
+                    <td>{{ despacho.ciudad_destino }}</td>
+                    <td>{{ despacho.nombre_remitente }}</td>
+                    <td>{{ despacho.nombre_destinatario }}</td>
+                    <td>{{ despacho.direccion_remitente }}</td>
+                    <td>{{ despacho.direccion_destinatario }}</td>
+                    <td>{{ despacho.documento_remitente }}</td>
+                    <td>{{ despacho.documento_remitente }}</td>
+                    <td>{{ despacho.celular_remitente }}</td>
+                    <td>{{ despacho.celular_destinatario }}</td>
+                    <td>{{ despacho.numero_envio }}</td>
+                    <td>{{ despacho.id_estado }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+

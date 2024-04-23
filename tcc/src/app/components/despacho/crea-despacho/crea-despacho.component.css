@@ -1,0 +1,29 @@
+.bd-example {
+    --bd-example-padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-radius: var(--bs-border-radius);
+}
+.bd-example {
+    --bd-example-padding: 1rem;
+    position: relative;
+    padding: var(--bd-example-padding);
+    margin: 0 -1.5rem 1rem;
+    border: solid var(--bs-border-color);
+    border-width: 1px 0;
+}
+
+
+.bd-code-snippet {
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-radius: var(--bs-border-radius);
+}
+
+.bd-code-snippet {
+    margin: 0 5.5rem 10rem;
+    border: solid var(--bs-border-color);
+    border-width: 1px .5px;
+}

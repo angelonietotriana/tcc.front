@@ -1,0 +1,7 @@
+<button mat-button  (click)="click('menu')">Home</button>
+<button mat-button [matMenuTriggerFor]="beforeMenu">Despachos</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item routerLinkActive="active-link" (click)="click('lista-despacho')">Consulta</button>
+  <button mat-menu-item routerLinkActive="active-link" (click)="click('crea-despacho')">Crea</button>
+  <button mat-menu-item routerLinkActive="active-link" (click)="click('edita-despacho')">Edita</button>
+</mat-menu>
